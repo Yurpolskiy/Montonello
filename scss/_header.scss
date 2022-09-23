@@ -43,9 +43,14 @@ header {
     display: none;
   }
 }
-@include mixins.responsive(1601px, 9999px) {
+@include mixins.responsive(1920px, 9999px) {
   .intro {
     height: 900px!important;
+  }
+  main {
+    .projects {
+      margin-top: 180px;
+    }
   }
 }
 /***************************** for pixelperfect **********************/
