@@ -1,0 +1,74 @@
+@use '../vars/colors';
+@use '../vars/displays';
+@use '../vars/fonts';
+@use '../vars/mixins';
+@import '../container';
+/*каюсь я супердебилыч, я просто должен был сделать так, что бы при миксинах
+класссы наследовались,
+но я что то совсем про это забыл, сори*/
+.commerce-centre {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .commerce-centre__text {
+    margin-top: 92px;
+  }
+  .commerce-centre__article {
+    margin-top: 21px;
+  }
+}
+.projects__commerce-center {
+  position: relative;
+  .images__rectangle {
+    top: -12.5%;
+    right: 0;
+    left: initial;
+  }
+}
+.commerce-centre__images {
+  order: 2;
+  margin-left: 33px;
+}
+.commerce-centre {
+  @include mixins.telephone_responsive(displays.$sm - 1px) {
+    flex-direction: column;
+    .commerce-centre__images {
+      order: 1;
+      img {
+        width: 300px;
+        height: 150px;
+      }
+    }
+    .commerce-centre__text {
+      text-align: center;
+      order: 2;
+    }
+  }
+  @include mixins.laptop_responsive(displays.$xl - 1px) {
+    .article {
+      width: 420px;
+    }
+  }
+  @include mixins.tablet_responsive(displays.$lg - 1px) {
+    padding: 0;
+    .title {
+      font-size: fonts.$h2_font-size - 8px;
+    }
+    .article {
+      width: 340px;
+    }
+    &_text {
+      margin-top: 40px !important;
+    }
+    .overhead {
+      font-size: fonts.$overhead_font-size - 4px;
+    }
+  }
+}
+
+/*************************** pixel-perfect *****************/
+@include mixins.pc_responsive(1920px) {
+  .commerce-centre__article {
+    width: 470px;
+  }
+}

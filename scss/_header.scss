@@ -1,0 +1,56 @@
+@use 'vars/colors';
+@use 'vars/displays';
+@use 'vars/fonts';
+@use 'vars/mixins';
+@import 'specifications/hrefs-style';
+@import '_container.scss';
+@import 'specifications/little-shit';
+
+.intro {
+  background-image: url("../images/header-background.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+header {
+  width: 100%;
+  padding-top: 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.social__icon {
+  margin-left: 20px;
+}
+
+/******************************* for mobiles ****************/
+@include mixins.telephone_responsive(displays.$sm - 168px) {
+  header {
+    justify-content: space-around;
+
+    .logo > svg {
+      width: 170px;
+      height: 38px;
+    }
+
+    .social__icon {
+      margin-left: 5px;
+    }
+  }
+}
+@include mixins.telephone_responsive(displays.$lg - 1px) {
+  .menu {
+    display: none;
+  }
+}
+/***************************** for pixelperfect **********************/
+@include mixins.responsive(displays.$xl, 1920px) {
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 62px;
+  }
+  .logo__img {
+    margin-left: 15px;
+  }
+}

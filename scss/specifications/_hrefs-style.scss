@@ -1,0 +1,41 @@
+@use '../vars/fonts';
+@use '../vars/colors';
+@use '../vars/displays';
+@use '../vars/mixins';
+.menu {
+  a {
+    font-size: fonts.$nav_font-size;
+    color: colors.$default-white;
+    font-family: fonts.$hrefs_style;
+    font-weight: fonts.$text_weight;
+    text-decoration: none;
+  }
+}
+  header{
+    ul {
+      display: flex;
+      gap: 70px;
+    }
+    li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+}
+  .social {
+    &__icon {
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border: none;
+    }
+    &__icon_instagram {
+      background-image: url("../../images/instagram.svg");
+    }
+    &__icon_facebook {
+      background-image: url("../../images/facebook.svg");
+    }
+    &__icon_twitter {
+      background-image: url("../../images/twitter.svg");
+    }
+  }

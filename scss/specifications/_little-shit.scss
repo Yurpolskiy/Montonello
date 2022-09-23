@@ -1,0 +1,24 @@
+@use '../vars/colors';
+@use '../vars/mixins';
+@use '../vars/displays';
+.menu__nav-dot {
+  width: 9px;
+  height: 9px;
+  box-sizing: border-box;
+  border: 1px solid colors.$default-white;
+  border-radius: 50%;
+  margin-right: 14px;
+}
+.menu__nav-dot_active {
+  background: colors.$default-white;
+}
+.about__switcher {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+}
+@include mixins.telephone_responsive(displays.$sm - 1px) {
+  .about__switcher {
+    right: 44%;
+  }
+}

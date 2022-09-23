@@ -1,0 +1,33 @@
+@use 'displays';
+@mixin telephone_responsive($endpoint) {
+  @media screen and (min-width: displays.$xs) and (max-width: $endpoint){
+    @content
+  }
+}
+@mixin tablet_responsive($endpoint) {
+  @media screen and (min-width: displays.$sm) and (max-width: $endpoint){
+    @content
+  }
+}
+@mixin laptop-mini_responsive($endpoint) {
+  @media screen and (min-width: displays.$lg-min) and (max-width: $endpoint) {
+    @content
+  }
+}
+@mixin laptop_responsive($endpoint) {
+  @media screen and (min-width: displays.$lg) and (max-width: $endpoint){
+    @content
+  }
+}
+@mixin pc_responsive($endpoint) {
+  @media screen and (min-width: displays.$xl) and (max-width: $endpoint) {
+    @content
+  }
+}
+@mixin responsive($begin-point, $endpoint) {
+  @media screen and (min-width: $begin-point) and (max-width: $endpoint) {
+    @content
+  }
+}
+
+

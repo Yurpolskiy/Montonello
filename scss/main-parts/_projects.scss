@@ -1,0 +1,192 @@
+@use '../vars/colors';
+@use '../vars/displays';
+@use '../vars/fonts';
+@use '../vars/mixins';
+@import '../container';
+@import 'commerce-center';
+
+/************************************ Дима, я вообще не понимаю как поставить классы
+ по БЭМу вот этой секции trade center, поэтому поставил флекс контейнер и теперь мучаюсь
+ че делать  =(, скажи тут норм написано или все перетирать ?*/
+.projects {
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 100px;
+  height: 200vh;
+
+  .border {
+    width: 200px;
+    border-bottom: 2px solid colors.$primary-color;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-size: fonts.$h2_font-size;
+    font-weight: fonts.$title_weight;
+    font-family: fonts.$titles_style;
+    color: colors.$primary-color;
+    line-height: 54px;
+  }
+
+  .projects__title {
+    margin: 0 auto;
+    word-wrap: normal;
+    text-align: center;
+    hyphens: none;
+    padding-top: 30px;
+  }
+  .more-details {
+    font-family: fonts.$buttons-font_style;
+    font-size: fonts.$button_font-size;
+    font-weight: fonts.$text_weight;
+    line-height: 17px;
+    color: colors.$default-black;
+    border: 1px solid colors.$primary-color;
+    width: 190px;
+    height: 50px;
+    background: transparent;
+    transform: translateY(29px);
+  }
+  .location {
+    font-family: fonts.$data-font_style;
+    font-size: fonts.$location_font-size;
+    font-weight: fonts.$text_weight;
+    color: colors.$default-black;
+    font-style: italic;
+    margin-left: 6px;
+    transform: translateY(60px);
+  }
+  .location:before {
+    content: url("../../images/location.svg");
+  }
+  .projects__trade-center_flex-container {
+    margin-bottom: 170px;
+  }
+}
+
+  /************************* trade center ********************/
+  .projects__trade-center {
+    margin-top: 90px;
+  }
+  .overhead {
+    font-family: fonts.$titles_style;
+    font-size: fonts.$overhead_font-size;
+    font-weight: fonts.$subtitle_weight;
+    line-height: 27px;
+    color: colors.$primary-color;
+  }
+
+  .article {
+    font-family: fonts.$text_style;
+    font-size: fonts.$text_font-size;
+    font-weight: fonts.$text_weight;
+    line-height: 30px;
+    color: colors.$primary-color;
+  }
+
+.projects__trade-center_flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .projects__trade-center_article {
+    margin-top: 20px;
+  }
+
+
+
+  @include mixins.laptop_responsive(displays.$xl - 1px) {
+    .article {
+      width: 420px;
+    }
+  }
+  @include mixins.tablet_responsive(displays.$lg - 1px) {
+    padding: 0;
+    .title {
+      font-size: fonts.$h2_font-size - 8px;
+    }
+    .article {
+      width: 340px;
+    }
+    &_text {
+      margin-top: 40px !important;
+    }
+    .overhead {
+      font-size: fonts.$overhead_font-size - 4px;
+    }
+  }
+}
+/*************************** for img **********************/
+.images__rectangle {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+img {
+  display: block;
+  height: fit-content;
+  max-width: 630px;
+}
+@include mixins.telephone_responsive(displays.$sm - 1px) {
+  .projects__trade-center_images > .projects__img {
+    width: 300px;
+    max-height: 150px;
+  }
+}
+@include mixins.responsive(displays.$xs, displays.$xl - 1px) {
+  .images__rectangle {
+    display: none;
+  }
+  .projects__img {
+    width: 90%;
+  }
+}
+/************************** mixins **********************/
+@include mixins.telephone_responsive(displays.$sm - 1px) {
+  .projects__trade-center_flex-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+  .projects__trade-center_text {
+    margin-top: 30px;
+    position: relative;
+  }
+  .article {
+    font-size: fonts.$text_font-size + 2px;
+    width: 250px;
+    margin: 0 auto;
+  }
+  .title {
+    font-size: fonts.$h2_font-size - 7px;
+  }
+  .overhead {
+    font-size: fonts.$overhead_font-size - 4px;
+  }
+}
+/************************* pixel-perfect ***************/
+@include mixins.pc_responsive(1920px) {
+  .projects {
+    padding: 0;
+    margin-top: 146px;
+    .location {
+      transform: translateY(93px);
+      margin-left: 20px;
+    }
+  }
+  .projects__trade-center_images:first-child {
+    margin-top: 60px;
+    margin-right: 40px;
+  }
+  .projects__trade-center_images > img:last-of-type {
+    top: 10.8%;
+    width: 590px;
+  }
+  .projects__trade-center_text {
+    margin-top: 30px;
+  }
+  .article {
+    width: 470px;
+  }
+}

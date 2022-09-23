@@ -1,0 +1,14 @@
+@use 'vars/mixins';
+@use 'vars/displays';
+@use 'vars/fonts';
+@use 'vars/colors';
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  @include mixins.telephone_responsive(displays.$sm - 1px) {
+    padding: 0 10px;
+  }
+  @include mixins.tablet_responsive(displays.$lg - 1px) {
+    padding: 0 25px;
+  }
+}

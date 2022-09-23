@@ -1,0 +1,124 @@
+@use '../vars/colors';
+@use '../vars/displays';
+@use '../vars/fonts';
+@use '../vars/mixins';
+/********************************* я плачу *********************/
+.about {
+  position: relative;
+}
+.slick-next {
+  right: 0;
+}
+.slick-dots {
+  display: flex;
+  li {
+    margin: 18px 0!important;
+    height: 10px!important;
+    width: 10px!important;
+    background: transparent;
+    border: 1px solid colors.$default-white;
+    border-radius: 50%;
+  }
+  .slick-active {
+    background: colors.$default-white;
+  }
+}
+.slick-next, .slick-arrow {
+  display: none;
+}
+.slick-current {
+  position: absolute;
+  bottom: 0;
+}
+.about__dots-container {
+  display: flex;
+  justify-content: space-around;
+  height: 40px;
+  width: 200px;
+  margin: 0 auto;
+}
+.about {
+  height: 78vh;
+  display: flex;
+  align-items: center;
+}
+.slider__item {
+  min-width: 0;
+  height: 400px;
+  display: flex;
+  align-items: center;
+}
+.slider__item_subtitle {
+  margin: 0 auto;
+}
+.dots {
+  .slick-dots {
+    position: static;
+  }
+}
+.slider {
+  min-width: 0;
+}
+.slick-active {}
+@include mixins.telephone_responsive(displays.$sm - 1px) {
+  .slider__item_title {
+    font-size: fonts.$h1_font-size - 30px;
+  }
+  .slider__item_subtitle {
+    line-height: 30px;
+  }
+  .slick-dots {
+    flex-direction: row;
+    li {
+      justify-self: flex-end;
+      margin: 0;
+    }
+  }
+}
+/********************* for other resolutions **********/
+@include mixins.telephone_responsive(displays.$lg-min - 1px) {
+  .dots {
+    width: 100%;
+    position: absolute;
+    bottom: 18%;
+    height: 100px;
+    margin: 0 auto;
+    .slick-dots {
+      justify-content: space-around;
+      margin: 0 auto;
+      width: 300px;
+      height: 100px;
+    }
+  }
+}
+@include mixins.tablet_responsive(displays.$lg-min - 1px) {
+  .slider__item_title {
+    font-size: fonts.$h1_font-size - 25px;
+  }
+  .slider__item_subtitle {
+    width: 400px;
+  }
+}
+@include mixins.laptop-mini_responsive(9999px) {
+  .dots > ul {
+    margin-right: 52px;
+    flex-direction: column;
+    @include mixins.laptop-mini_responsive(displays.$lg) {
+      margin-right: 26px;
+    }
+  }
+}
+/******************** pixel perfect ***************/
+@include mixins.pc_responsive(9999px) {
+  .dots {
+    position: absolute;
+    right: 0;
+    top: 29%;
+  }
+}
+.slick-dotted {
+  .slick-slider {
+  margin-bottom: 80px;
+  }
+}
+.slider {}

@@ -1,0 +1,42 @@
+@use 'vars/colors';
+@use 'vars/displays';
+@use 'vars/fonts';
+@use 'vars/mixins';
+@import 'specifications/slider';
+@import 'modules/modules';
+@import 'main-parts/projects';
+@import 'main-parts/commerce-center';
+/*************************** about section ****************/
+.intro {
+  width: 100%;
+  background-size: cover;
+  height: 800px;
+}
+.slider__item {
+  height: 100%;
+  text-align: center;
+  &_title {
+    font-family: fonts.$titles_style;
+    font-size: fonts.$h1_font-size;
+    font-weight: fonts.$title_weight;
+    color: colors.$default-white;
+    letter-spacing: 0.1em;
+  }
+  &_subtitle {
+    font-family: fonts.$subtitles_style;
+    font-size: fonts.$subtitle_font-size;
+    font-weight: fonts.$subtitle_weight;
+    color: colors.$default-white;
+    letter-spacing: 0.3em;
+  }
+}
+@include mixins.telephone_responsive(displays.$lg-min - 1px) {
+  .slider__item_title {
+    font-size: fonts.$h1_font-size - 25px;
+    margin-bottom: 20px;
+  }
+}
+/************* for pixel perfect **************/
+
+
+
