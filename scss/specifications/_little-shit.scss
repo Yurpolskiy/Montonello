@@ -14,8 +14,8 @@
 }
 .about__switcher {
   position: absolute;
-  bottom: 0;
-  right: 50%;
+  bottom: 7%;
+  right: 49%;
 }
 @include mixins.telephone_responsive(displays.$sm - 1px) {
   .about__switcher {

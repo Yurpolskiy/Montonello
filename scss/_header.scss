@@ -43,8 +43,13 @@ header {
     display: none;
   }
 }
+@include mixins.responsive(1601px, 9999px) {
+  .intro {
+    height: 900px!important;
+  }
+}
 /***************************** for pixelperfect **********************/
-@include mixins.responsive(displays.$xl, 1920px) {
+@include mixins.responsive(displays.$xl, 9999px) {
   .menu {
     display: flex;
     justify-content: space-between;

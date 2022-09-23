@@ -166,10 +166,10 @@ img {
   }
 }
 /************************* pixel-perfect ***************/
-@include mixins.pc_responsive(1920px) {
+@include mixins.pc_responsive(9999px) {
   .projects {
     padding: 0;
-    margin-top: 146px;
+    margin-top: 97px;
     .location {
       transform: translateY(93px);
       margin-left: 20px;
