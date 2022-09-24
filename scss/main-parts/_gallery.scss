@@ -1,0 +1,92 @@
+@use '../vars/colors';
+@use '../vars/displays';
+@use '../vars/fonts';
+@use '../vars/mixins';
+@import '../container';
+.gallery {
+  height: 98.5vh;
+  padding-top: 60px;
+  .border {
+    width: 100px;
+    margin-bottom: 28px;
+  }
+  .gallery__title {
+    text-align: center;
+    margin-bottom: 91px;
+  }
+}
+.gallery__grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 220px);
+
+  .item__1 {
+    grid-column: 1/3;
+  }
+
+  .item__2 {
+    grid-column-start: 3;
+    grid-row: 2/2;
+  }
+
+  .item__3 {
+    grid-column: 4/4;
+    grid-row: 2/2;
+  }
+}
+.gallery__button {
+  width: fit-content;
+  margin: 28px auto 0 auto;
+}
+/************8 for telephones ************/
+@include mixins.telephone_responsive(displays.$sm - 1px) {
+  .gallery__grid-container {
+    display: initial;
+    .item {}
+    img {
+      width: 80%;
+      max-width: 500px;
+      margin: 0 auto;
+      margin-top: 25px;
+    }
+  }
+}
+@include mixins.responsive(displays.$sm, displays.$lg) {
+  .gallery {
+    .gallery__grid-container {
+      column-gap: 10px;
+    }
+    .item__1 {
+      grid-column-start: 2/4;
+      grid-column-end: 2/4;
+      grid-row: 1/2;
+      justify-self: right;
+    }
+    .item__2 {
+      justify-self: end;
+      grid-column-start: 2;
+      img {
+        display: inline;
+      }
+    }
+    .item__3 {
+      grid-column: 3/4;
+      grid-row: 2/2;
+    }
+    .item__4 {
+      display: none;
+    }
+    .item__5 {
+      grid-column: 3/4;
+    }
+    img {
+      width: 240px;
+    }
+  }
+}
+/*********** for normal seeing *************/
+@include mixins.responsive(displays.$xl + 200px, 9999px) {
+  .gallery {
+    height: 85vh;
+  }
+}
