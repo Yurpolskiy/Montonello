@@ -806,11 +806,14 @@ img {
 @media screen and (min-width: 1440px) and (max-width: 9999px) {
   .projects {
     padding: 0;
-    margin-top: 92px;
+    margin-top: 118px;
   }
   .projects .location {
     transform: translateY(93px);
     margin-left: 20px;
+  }
+  .projects .border {
+    width: 100px;
   }
   .projects__trade-center_images:first-child {
     margin-top: 60px;
@@ -1046,9 +1049,9 @@ img {
 }
 .latest-news {
   position: relative;
-  margin-top: 119px;
+  margin-top: 172px;
   background-image: url("../../images/Background.jpg");
-  height: 107vh;
+  height: 111vh;
   background-size: cover;
   box-sizing: border-box;
   padding-top: 120px;
@@ -1205,7 +1208,7 @@ img {
   width: 48%;
   height: 450px;
   position: absolute;
-  margin: -150px;
+  margin: -180px;
 }
 .contact .border {
   width: 100px;
@@ -1292,7 +1295,7 @@ footer {
   background-image: url("../images/footer_background.jpg");
   width: 100%;
   background-size: cover;
-  height: 57vh;
+  height: 66vh;
 }
 
 body {
