@@ -1,0 +1,11 @@
+@use 'vars/colors';
+@use 'vars/displays';
+@use 'vars/fonts';
+@use 'vars/mixins';
+@import 'container';
+footer {
+  background-image: url("../images/footer_background.jpg");
+  width: 100%;
+  background-size: cover;
+  height: 57vh;
+}

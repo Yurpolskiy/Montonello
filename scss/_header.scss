@@ -53,6 +53,12 @@ header {
     }
   }
 }
+/*************************** for opera **********/
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+  .intro {
+    height: 900px!important;
+  }
+}
 /***************************** for pixelperfect **********************/
 @include mixins.responsive(displays.$xl, 9999px) {
   .menu {

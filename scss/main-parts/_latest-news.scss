@@ -6,9 +6,9 @@
 @import '../specifications/latest-news__slider';
 .latest-news {
   position: relative;
-  margin-top: 60px;
+  margin-top: 119px;
   background-image: url("../../images/Background.jpg");
-  height: 121vh;
+  height: 107vh;
   background-size: cover;
   box-sizing: border-box;
   padding-top: 120px;
@@ -16,5 +16,8 @@
   &__title {
     margin-top: 28px;
     margin-bottom: 93px;
+  }
+  .border {
+    width: 100px;
   }
 }

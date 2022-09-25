@@ -12,7 +12,7 @@
   position: relative;
   box-sizing: border-box;
   padding-top: 100px;
-  height: 163vh;
+  height: 150vh;
 
   .projects__title {
     margin: 0 auto;
@@ -143,7 +143,7 @@ img {
 @include mixins.pc_responsive(9999px) {
   .projects {
     padding: 0;
-    margin-top: 97px;
+    margin-top: 92px;
     .location {
       transform: translateY(93px);
       margin-left: 20px;

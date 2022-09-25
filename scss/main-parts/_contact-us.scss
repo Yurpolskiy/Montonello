@@ -1,0 +1,38 @@
+@use '../vars/colors';
+@use '../vars/displays';
+@use '../vars/fonts';
+@use '../vars/mixins';
+@import '../container';
+.map {
+  background-image: url("../../images/Map.jpg");
+  width: 100%;
+  height: 76vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.contact{
+  padding-top: 60px;
+  box-sizing: border-box;
+  background: colors.$default-white;
+  width: 48%;
+  height: 450px;
+  position: absolute;
+  margin: -150px;
+  .border {
+    width: 100px;
+    margin-bottom: 28px;
+  }
+  .title {
+    text-align: center;
+  }
+}
+/********* for pixel perfect ************/
+@include mixins.responsive(displays.$xl + 160px, 9999px) {
+  .contact {
+
+    .border {
+      margin-bottom: 28px;
+    }
+  }
+}

@@ -27,10 +27,10 @@
             </div>
             <nav class="menu">
                 <ul>
-                    <li><span class="menu__nav-dot menu__nav-dot_active"></span><a class="menu__link" href="#">ABOUT US</a></li>
-                    <li><span class="menu__nav-dot "></span><a class="menu__link" href="#">PROJECTS</a></li>
-                    <li><span class="menu__nav-dot "></span><a class="menu__link" href="#">NEWS</a></li>
-                    <li><span class="menu__nav-dot "></span><a class="menu__link" href="#">CONTACT</a></li>
+                    <li><span class="menu__nav-dot menu__nav-dot_active"></span><a class="scroll menu__link" href="#about" target="about">ABOUT US</a></li>
+                    <li><span class="menu__nav-dot "></span><a class="scroll menu__link" href="#projects">PROJECTS</a></li>
+                    <li><span class="menu__nav-dot "></span><a class="scroll menu__link" href="#news">NEWS</a></li>
+                    <li><span class="menu__nav-dot "></span><a class="scroll menu__link" href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
             <div class="social">
@@ -65,7 +65,7 @@
                 </div>
             </div>
             <div class="about__switcher">
-                <img src="images/arrow.svg" alt="icon"><a href="#projects"></a>
+               <a class="scroll" href="#projects"> <img src="images/arrow.svg" alt="icon"></a>
             </div>
             <div class="dots"></div>
         </section>
@@ -121,7 +121,7 @@
                 </div>
             </div>
         </section>
-        <section class="latest-news">
+        <section class="latest-news" id="news">
             <div class="container">
                 <div class="border"></div>
                 <h2 class="title latest-news__title">LATEST NEWS</h2>
@@ -157,11 +157,19 @@
                     </div>
                 </div>
                 <div class="gallery__button">
-                    <button class="gallery__button_see-more" type="submit">See more</button>
+                    <button class="gallery__button_see-more" type="submit">SEE MORE</button>
                 </div>
             </div>
         </section>
+        <div class="map">
+            <div class="contact" id="contact">
+                <div class="border"></div>
+                <h2 class="title contact__title">GET IN TOUCH</h2>
+            </div>
+        </div>
     </main>
+    <footer>
+    </footer>
 </div>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="

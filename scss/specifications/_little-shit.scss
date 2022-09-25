@@ -37,3 +37,8 @@ button[type="submit"] {
     right: 44%;
   }
 }
+@include mixins.responsive(displays.$xl + 300px, 9999px) {
+  .about__switcher {
+    bottom: 15%;
+  }
+}

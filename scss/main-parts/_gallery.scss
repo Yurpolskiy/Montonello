@@ -4,8 +4,9 @@
 @use '../vars/mixins';
 @import '../container';
 .gallery {
-  height: 98.5vh;
-  padding-top: 60px;
+  padding-top: 143px;
+  height: fit-content;
+  margin-bottom: 185px;
   .border {
     width: 100px;
     margin-bottom: 28px;

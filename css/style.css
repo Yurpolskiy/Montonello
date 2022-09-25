@@ -100,6 +100,11 @@ button[type=submit] {
     right: 44%;
   }
 }
+@media screen and (min-width: 1740px) and (max-width: 9999px) {
+  .about__switcher {
+    bottom: 15%;
+  }
+}
 .intro {
   background-image: url("../images/header-background.jpg");
   background-size: cover;
@@ -143,6 +148,12 @@ header {
   }
   main .projects {
     margin-top: 180px;
+  }
+}
+/*************************** for opera **********/
+@media all and (-webkit-min-device-pixel-ratio: 10000), not all and (-webkit-min-device-pixel-ratio: 0) {
+  .intro {
+    height: 900px !important;
   }
 }
 /***************************** for pixelperfect **********************/
@@ -204,7 +215,8 @@ header {
 }
 
 .about {
-  height: 79vh;
+  margin-top: 38px;
+  height: 72vh;
   display: flex;
   align-items: center;
 }
@@ -290,6 +302,7 @@ header {
   margin-bottom: 80px;
 }
 
+/********** for opera *********/
 /* Slider */
 .slick-loading .slick-list {
   background: #fff url("./ajax-loader.gif") center center no-repeat;
@@ -381,7 +394,7 @@ header {
 
 /* Dots */
 .slick-dotted.slick-slider {
-  margin-bottom: 130px;
+  margin-bottom: 165px;
 }
 
 .slick-dots {
@@ -662,7 +675,7 @@ header {
   position: relative;
   box-sizing: border-box;
   padding-top: 100px;
-  height: 163vh;
+  height: 150vh;
 }
 .projects .projects__title {
   margin: 0 auto;
@@ -793,7 +806,7 @@ img {
 @media screen and (min-width: 1440px) and (max-width: 9999px) {
   .projects {
     padding: 0;
-    margin-top: 97px;
+    margin-top: 92px;
   }
   .projects .location {
     transform: translateY(93px);
@@ -1033,9 +1046,9 @@ img {
 }
 .latest-news {
   position: relative;
-  margin-top: 60px;
+  margin-top: 119px;
   background-image: url("../../images/Background.jpg");
-  height: 121vh;
+  height: 107vh;
   background-size: cover;
   box-sizing: border-box;
   padding-top: 120px;
@@ -1044,6 +1057,9 @@ img {
 .latest-news__title {
   margin-top: 28px;
   margin-bottom: 93px;
+}
+.latest-news .border {
+  width: 100px;
 }
 
 /*************************** font-styles **************/
@@ -1068,8 +1084,9 @@ img {
 }
 
 .gallery {
-  height: 98.5vh;
-  padding-top: 60px;
+  padding-top: 143px;
+  height: fit-content;
+  margin-bottom: 185px;
 }
 .gallery .border {
   width: 100px;
@@ -1151,6 +1168,59 @@ img {
     height: 85vh;
   }
 }
+/*************************** font-styles **************/
+/************************ font-weights *************/
+/************************ font-sizes ****************/
+/*************************** font-styles **************/
+/************************ font-weights *************/
+/************************ font-sizes ****************/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    padding: 0 25px;
+  }
+}
+
+.map {
+  background-image: url("../../images/Map.jpg");
+  width: 100%;
+  height: 76vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.contact {
+  padding-top: 60px;
+  box-sizing: border-box;
+  background: white;
+  width: 48%;
+  height: 450px;
+  position: absolute;
+  margin: -150px;
+}
+.contact .border {
+  width: 100px;
+  margin-bottom: 28px;
+}
+.contact .title {
+  text-align: center;
+}
+
+/********* for pixel perfect ************/
+@media screen and (min-width: 1600px) and (max-width: 9999px) {
+  .contact .border {
+    margin-bottom: 28px;
+  }
+}
 /*************************** about section ****************/
 .intro {
   width: 100%;
@@ -1197,6 +1267,34 @@ img {
     margin-bottom: 20px;
   }
 }
+/*************************** font-styles **************/
+/************************ font-weights *************/
+/************************ font-sizes ****************/
+/*************************** font-styles **************/
+/************************ font-weights *************/
+/************************ font-sizes ****************/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    padding: 0 25px;
+  }
+}
+
+footer {
+  background-image: url("../images/footer_background.jpg");
+  width: 100%;
+  background-size: cover;
+  height: 57vh;
+}
+
 body {
   margin: 0;
 }
