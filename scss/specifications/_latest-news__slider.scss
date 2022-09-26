@@ -32,14 +32,14 @@
   left: -84px;
 }
 .slick-prev:before {
-  content:  url("../../images/arrow_left.svg");
+  content:  url("../images/arrow_left.svg");
 }
 .slick-next {
   height: 56px;
   right: -66px;
 }
 .slick-next:after {
-  content: url("../../images/arrow_right.svg");
+  content: url("../images/arrow_right.svg");
 }
 /******************* for normal seeings ***********/
 @include mixins.responsive(displays.$xs, displays.$lg-min - 1px) {
