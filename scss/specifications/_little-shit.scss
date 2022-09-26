@@ -18,7 +18,7 @@
   bottom: 7%;
   right: 49%;
 }
-button[type="submit"] {
+button[type="submit"], {
   font-family: fonts.$buttons-font_style;
   font-size: fonts.$button_font-size;
   font-weight: fonts.$text_weight;
@@ -28,9 +28,18 @@ button[type="submit"] {
   background: transparent;
   transform: translateY(29px);
 }
+.copyright {
+  font-family: fonts.$subtitles_style;
+  font-size: fonts.$copyright_font-size;
+  color: colors.$default-white;
+
+}
 .more-details, .gallery__button_see-more {
   width: 190px;
   height: 50px;
+}
+textarea:focus, input:focus{
+  outline: none;
 }
 @include mixins.telephone_responsive(displays.$sm - 1px) {
   .about__switcher {

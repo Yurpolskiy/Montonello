@@ -6,7 +6,7 @@
 .map {
   background-image: url("../../images/Map.jpg");
   width: 100%;
-  height: 76vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -18,7 +18,7 @@
   width: 48%;
   height: 450px;
   position: absolute;
-  margin: -180px;
+  margin: -148px;
   .border {
     width: 100px;
     margin-bottom: 28px;
@@ -26,13 +26,75 @@
   .title {
     text-align: center;
   }
-}
-/********* for pixel perfect ************/
-@include mixins.responsive(displays.$xl + 160px, 9999px) {
-  .contact {
-
-    .border {
-      margin-bottom: 28px;
-    }
+  .contact__inside {
+    display: flex;
+    height: 61%;
+    justify-content: space-evenly;
+    margin-top: 46px
+  }
+  .inputs {
+    display: flex;
+    flex-direction: column;
   }
 }
+.inputs {
+  input {
+    width: 310px;
+    padding-bottom: 21px;
+    border: none;
+    border-bottom: 1px solid colors.$primary-color;
+  }
+  input::placeholder {
+    color: colors.$default-black;
+    font-size: fonts.$text_font-size;
+    font-style: fonts.$titles_style;
+    font-weight: fonts.$text_weight;
+  }
+  input[type='text']:hover, input[type="email"]:hover {
+    border-bottom: 1px solid colors.$default-black;
+    font-size: fonts.$text_font-size;
+    transition: .5s all;
+    padding-bottom: 10px;
+  }
+  &__username-input {
+    margin-bottom: 37px;
+  }
+  &__button {
+    width: 140px;
+    height: 50px;
+    align-self: flex-end;
+  }
+  .contact__inside_contacts {
+    width: 36%;
+  }
+}
+/************ for normal seeing ************/
+@include mixins.responsive(displays.$xs, displays.$sm - 1px) {
+  .contact {
+    width: 100%;
+  }
+}
+@include mixins.responsive(displays.$sm, displays.$lg - 1px) {
+  .contact {
+    width: 70%;
+  }
+}
+@include mixins.responsive(displays.$xs, displays.$xl - 1px) {
+  .contact__inside_contacts {
+    display: none;
+  }
+  .inputs__button {
+    align-self: center;
+  }
+}
+  /********* for pixel perfect ************/
+  @include mixins.responsive(displays.$xl + 160px, 9999px) {
+    .contact {
+      .border {
+        margin-bottom: 28px;
+      }
+    }
+    .inputs > input{
+      width: 310px;
+    }
+  }

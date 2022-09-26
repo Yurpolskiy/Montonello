@@ -48,7 +48,7 @@
   }
 }
 @include mixins.responsive(displays.$xs, displays.$xs + 80px) {
-  img {
+  .item > img {
     width: 340px;
   }
   .latest-news__slider_dots {

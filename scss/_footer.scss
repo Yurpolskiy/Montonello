@@ -7,5 +7,45 @@ footer {
   background-image: url("../images/footer_background.jpg");
   width: 100%;
   background-size: cover;
-  height: 66vh;
+  height: 62vh;
+  > .flex-container {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+  }
+  .logo {
+    width: fit-content;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 25px;
+  }
+  .logo > img {
+    margin-bottom: 40px;
+  }
+}
+/***************** for normal seeing *********/
+@include mixins.responsive(displays.$xs, displays.$sm - 1px) {
+  footer {
+    height: 50vh;
+  }
+  .footer__socials {
+    margin-bottom: 50px;
+  }
+  footer > .flex-container {
+    flex-direction: column;
+    justify-content: flex-end;
+    .logo > img {
+      margin-bottom: 30px;
+    }
+  }
+}
+/********* pixel-perfect ********/
+@include mixins.responsive(displays.$xl + 160px, 9999px) {
+  .footer__socials {
+    margin-bottom: 90px;
+    margin-right: 30px;
+  }
 }

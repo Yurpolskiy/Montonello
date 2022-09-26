@@ -21,3 +21,9 @@
     width: 100px;
   }
 }
+/******* for normal seeing *********/
+@include mixins.responsive(displays.$sm, displays.$lg-min - 1px) {
+  .latest-news {
+    margin: 0;
+  }
+}
