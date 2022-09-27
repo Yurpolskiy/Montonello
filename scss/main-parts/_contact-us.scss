@@ -50,7 +50,8 @@
     font-style: fonts.$titles_style;
     font-weight: fonts.$text_weight;
   }
-  input[type='text']:hover, input[type="email"]:hover {
+  input[type='text']:hover, input[type='email']:hover,
+  input[type='text']:focus, input[type='email']:focus {
     border-bottom: 1px solid colors.$default-black;
     font-size: fonts.$text_font-size;
     transition: .5s all;

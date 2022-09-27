@@ -48,3 +48,5 @@ $('.scroll').on( 'click', function(){
     }
     return false;
 });
+const svgElem = $('svg');
+svgElem.style.fill = 'red';

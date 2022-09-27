@@ -41,6 +41,9 @@ button[type="submit"], {
 textarea:focus, input:focus{
   outline: none;
 }
+input, button {
+  cursor: pointer;
+}
 @include mixins.telephone_responsive(displays.$sm - 1px) {
   .about__switcher {
     right: 44%;

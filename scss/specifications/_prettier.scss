@@ -1,0 +1,27 @@
+@use '../vars/colors';
+@use '../vars/fonts';
+@use '../vars/mixins';
+button[type='submit'] {
+  transition: .7s all;
+}
+button[type='submit']:hover,
+button[type='submit']:focus{
+  box-shadow:
+          inset -30em 0 0 0 (colors.$default-black),
+          inset 30em 0 0 0 (colors.$default-black);
+  color: colors.$default-white;
+  font-weight: fonts.$title_weight;
+}
+.social__icon {
+  transition: .5s all;
+  border-radius: 50%;
+}
+.social__icon_facebook:hover {
+  background-image: url("../../images/facebook__hover.svg");
+  z-index: 1;
+}
+.social__icon:hover,
+.social__icon:focus{
+  transition: .5s all;
+  box-shadow: inset 0 -3.25em 0 0 (colors.$default-white);
+}
