@@ -9,7 +9,6 @@ header {
   left: 0;
   position: fixed;
   width: 100%;
-  padding-top: 50px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-around;
@@ -19,6 +18,7 @@ header {
   background: linear-gradient(90deg, rgba(105,118,195,1) 15%, rgba(137,24,236,1) 30%, rgba(51,63,170,1) 84%);
 }
 .header-container {
+  align-items: center;
   display: flex;
   justify-content: space-between;
   width: 1200px;
@@ -72,6 +72,20 @@ header {
     display: none;
   }
 }
+@include mixins.responsive(displays.$xs, displays.$sm - 1px) {
+  header  {
+    padding: 0;
+    height: 64px;
+    .logo {display: none;}
+    .menu {
+      width: 100%;
+    }
+    ul{
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+}
 @include mixins.telephone_responsive(displays.$lg - 1px) {
   header {
     align-items: center;
@@ -103,6 +117,14 @@ header {
 }
 /***************************** for pixelperfect **********************/
 @include mixins.responsive(displays.$xl, 9999px) {
+  header {
+    height: 120px;
+  }
+  header {
+    .header-container {
+      margin-top: 38px;
+    }
+  }
   .menu {
     display: flex;
     justify-content: space-between;

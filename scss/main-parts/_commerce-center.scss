@@ -43,6 +43,9 @@
         margin: 20px 0;
       }
     }
+    .commerce-centre__images {
+      margin: 0;
+    }
   }
   @include mixins.laptop_responsive(displays.$xl - 1px) {
     .article {

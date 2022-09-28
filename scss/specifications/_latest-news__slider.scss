@@ -15,15 +15,13 @@
   }
 }
 .latest-news__slider_dots {
-  display: flex;
-  justify-content: space-around;
-  width: 40px;
-  position: absolute;
-  bottom: 12.5%;
-  left: 53%;
-  height: 23px;
+  position: static;
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 20px;
   ul {
     width: 200px;
+    position: static;
     justify-content: space-between;
   }
 }
@@ -40,38 +38,22 @@
 }
 .slick-next:after {
   content: url("../images/arrow_right.svg");
-}
-/******************* for normal seeings ***********/
-@include mixins.responsive(displays.$xs, displays.$lg-min - 1px) {
-  .latest-news__slider_dots {
-    left: 56%;
-  }
-}
-@include mixins.responsive(displays.$xs, displays.$xs + 80px) {
-  .item > img {
-    width: 340px;
-  }
-  .latest-news__slider_dots {
-    left: 63%;
-  }
-}
-@include mixins.responsive(displays.$sm - 84px, displays.$lg-min - 1px) {
-  .latest-news {
-    img {
-      width: 300px;
+  @include mixins.responsive(displays.$xs, displays.$xs + 80px) {
+    .item > img {
+      width: 340px;
     }
   }
 }
-@include mixins.responsive(displays.$lg, displays.$xl + 140px ) {
-  .latest-news {
-    img {
-      width: 330px;
+  @include mixins.responsive(displays.$lg, displays.$xl + 140px) {
+    .latest-news {
+      img {
+        width: 330px;
+      }
     }
   }
-}
-/******************* for arrows **************/
-@include mixins.responsive(displays.$xs, displays.$xl + 159px) {
-.slick-prev, .slick-next {
-  display: none!important;
+  /******************* for arrows **************/
+  @include mixins.responsive(displays.$xs, displays.$xl + 159px) {
+    .slick-prev, .slick-next {
+      display: none !important;
+    }
   }
-}
