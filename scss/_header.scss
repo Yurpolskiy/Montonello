@@ -6,14 +6,17 @@
 @import '_container.scss';
 @import 'specifications/little-shit';
 header {
+  left: 0;
   position: fixed;
   width: 100%;
   padding-top: 50px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-around;
-  max-width: 1200px;
   align-items: center;
+  z-index: 2;
+  background: rgb(105,118,195);
+  background: linear-gradient(90deg, rgba(105,118,195,1) 15%, rgba(137,24,236,1) 30%, rgba(51,63,170,1) 84%);
 }
 .about {
   margin-top: 0;
@@ -28,10 +31,15 @@ header {
 .social__icon {
   margin-left: 20px;
 }
+.header-container {
+  max-width: 100% !important;
+}
 
 /******************************* for mobiles ****************/
 @include mixins.telephone_responsive(displays.$sm - 168px) {
   header {
+    padding: 0;
+    height: 64px;
     justify-content: space-around;
 
     .logo > svg {

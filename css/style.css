@@ -120,14 +120,17 @@ input, button {
   }
 }
 header {
+  left: 0;
   position: fixed;
   width: 100%;
   padding-top: 50px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-around;
-  max-width: 1200px;
   align-items: center;
+  z-index: 2;
+  background: rgb(105, 118, 195);
+  background: linear-gradient(90deg, rgb(105, 118, 195) 15%, rgb(137, 24, 236) 30%, rgb(51, 63, 170) 84%);
 }
 
 .about {
@@ -146,9 +149,15 @@ header {
   margin-left: 20px;
 }
 
+.header-container {
+  max-width: 100% !important;
+}
+
 /******************************* for mobiles ****************/
 @media screen and (min-width: 375px) and (max-width: 600px) {
   header {
+    padding: 0;
+    height: 64px;
     justify-content: space-around;
   }
   header .logo > svg {
