@@ -18,6 +18,11 @@ header {
   background: rgb(105,118,195);
   background: linear-gradient(90deg, rgba(105,118,195,1) 15%, rgba(137,24,236,1) 30%, rgba(51,63,170,1) 84%);
 }
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+}
 .about {
   margin-top: 0;
 }
@@ -46,7 +51,6 @@ header {
       width: 170px;
       height: 38px;
     }
-
     .social__icon {
       margin-left: 5px;
     }
