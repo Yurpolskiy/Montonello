@@ -1503,15 +1503,22 @@ button[type=submit]:focus {
   border-radius: 50%;
 }
 
-.social__icon_facebook:hover {
-  background-image: url("../../images/facebook__hover.svg");
+.social__icon_facebook:hover, .social__icon_facebook:focus {
+  background-image: url("../images/facebook__hover.svg");
   z-index: 1;
+}
+
+.social__icon_instagram:hover, .social__icon_instagram:focus {
+  background-image: url("../images/instagram__hover.svg");
+}
+
+.social__icon_twitter:hover, .social__icon_twitter:focus {
+  background-image: url("../images/twitter__hover.svg");
 }
 
 .social__icon:hover,
 .social__icon:focus {
   transition: 0.5s all;
-  box-shadow: inset 0 -3.25em 0 0 white;
 }
 
 body {
