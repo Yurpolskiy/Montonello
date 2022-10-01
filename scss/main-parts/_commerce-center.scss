@@ -3,9 +3,6 @@
 @use '../vars/fonts';
 @use '../vars/mixins';
 @import '../container';
-/*каюсь я супердебилыч, я просто должен был сделать так, что бы при миксинах
-класссы наследовались,
-но я что то совсем про это забыл, сори*/
 .commerce-centre {
   display: flex;
   justify-content: space-around;
